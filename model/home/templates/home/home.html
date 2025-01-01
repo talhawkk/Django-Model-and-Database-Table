@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>M. Talha</h1>
+    <h2>Model and database Table in Django </h2>
+    <!-- {{stu}} -->
+    
+    {% if stu %}
+    <h2>show data</h2>
+    <table border="1">
+    <tr>
+        <th>ID</th>
+        <th>StuID</th>
+        <th>STuname</th>
+        <th>Stuemail</th>
+        <th>Stupassword</th>
+    </tr> 
+    {% for st in stu %}
+    <tr>
+    <td>{{st.id}}</td>
+    <td>{{st.stuid}}</td>
+    <td>{{st.stuname}}</td>
+    <td>{{st.stuemail}}</td>
+    <td>{{st.stupass}}</td>
+</tr>
+{% endfor %}
+</table>
+    {% else %}
+    <h2>not found</h2>
+    {% endif %}
+</body>
+</html>
